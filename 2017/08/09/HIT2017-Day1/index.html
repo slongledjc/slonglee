@@ -94,17 +94,17 @@
 
 
 
-<meta name="description" content="今天的内容是贪心,二分和三分 &amp;lt;!-- more --&amp;gt; CF651A 题目大意: 有两个手机,电量分别为$a,b$,使用一个每秒电量$-2$,另一个充电每秒$+1$,询问最多能玩几秒 题解: 最开始没读明白题,以为是两个人游戏最晚到小于等于$0$,所以$1,1$时输出$1$,答案应该是$0$ 贪心,每次玩电量最多的玩到差一点就没,另一个充电,直到不行 CF723C 题解: 玄学,,,">
+<meta name="description" content="今天的内容是贪心,二分和三分">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HIT2017 Day1">
 <meta property="og:url" content="http://yoursite.com/2017/08/09/HIT2017-Day1/index.html">
 <meta property="og:site_name" content="slongle">
-<meta property="og:description" content="今天的内容是贪心,二分和三分 &amp;lt;!-- more --&amp;gt; CF651A 题目大意: 有两个手机,电量分别为$a,b$,使用一个每秒电量$-2$,另一个充电每秒$+1$,询问最多能玩几秒 题解: 最开始没读明白题,以为是两个人游戏最晚到小于等于$0$,所以$1,1$时输出$1$,答案应该是$0$ 贪心,每次玩电量最多的玩到差一点就没,另一个充电,直到不行 CF723C 题解: 玄学,,,">
+<meta property="og:description" content="今天的内容是贪心,二分和三分">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-08-09T15:34:36.749Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HIT2017 Day1">
-<meta name="twitter:description" content="今天的内容是贪心,二分和三分 &amp;lt;!-- more --&amp;gt; CF651A 题目大意: 有两个手机,电量分别为$a,b$,使用一个每秒电量$-2$,另一个充电每秒$+1$,询问最多能玩几秒 题解: 最开始没读明白题,以为是两个人游戏最晚到小于等于$0$,所以$1,1$时输出$1$,答案应该是$0$ 贪心,每次玩电量最多的玩到差一点就没,另一个充电,直到不行 CF723C 题解: 玄学,,,">
+<meta name="twitter:description" content="今天的内容是贪心,二分和三分">
 
 
 
@@ -329,67 +329,25 @@
       
 
       
-        <p>今天的内容是贪心,二分和三分
-&lt;!-- more --&gt;</p>
-<h2><a href="http://codeforces.com/problemset/problem/651/A" target="_blank" rel="external">CF651A</a></h2>
-<h3>题目大意:</h3>
-<p>有两个手机,电量分别为$a,b$,使用一个每秒电量$-2$,另一个充电每秒$+1$,询问最多能玩几秒</p>
-<h3>题解:</h3>
-<p>最开始没读明白题,以为是两个人游戏最晚到小于等于$0$,所以$1,1$时输出$1$,答案应该是$0$
-贪心,每次玩电量最多的玩到差一点就没,另一个充电,直到不行</p>
-<h2><a href="http://codeforces.com/problemset/problem/723/C" target="_blank" rel="external">CF723C</a></h2>
-<h3>题解:</h3>
-<p>玄学,,,,莫名其妙,,,,这,,,,C？</p>
-<h2><a href="http://poj.org/problem?id=1700" target="_blank" rel="external">POJ1700 Crossing River</a></h2>
-<h3>题目大意:</h3>
-<p>有$n$个人要过河,船每次最多装$2$个人,每次过河时间为船上过河时间最长的人的时间,寻最少多长时间所有人都能到对岸</p>
-<h3>题解:</h3>
-<p>经典问题啊,我不会啊QAQAQ
-是这样的,有两个决策方案
-第一个比较明显,用时间最短的人把所有人带过去,这样用时最短的人回来用时少
-第二个方案是,用时最大的两个人一起过去,这样次大的时间就没了,他俩过取前先让最小和次小过去,并留下一个,这个是为了把最大次大带过去的船带回来
-这两个方案合起来(比较哪个更优)就是答案</p>
-<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1789" target="_blank" rel="external">HDU1789 Doing Homework again</a></h2>
-<h3>题目大意:</h3>
-<p>给定一堆deadline,每件事需要做一天,并且有一个价值,询问最少丢掉的价值</p>
-<h3>题解:</h3>
-<p>按照价值排序,安排在临近deadline的日子里</p>
-<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4864" target="_blank" rel="external">HDU4864 Task</a></h2>
-<h3>题目大意:</h3>
-<p>给定$n$个机器和$m$件任务,机器的运行时间和等级必须大于等于任务的才能有收益,第$i$件任务的收益为$time<em>500+lv</em>2$,询问最大收益</p>
-<h3>题解:</h3>
-<p>因为$time$的权重大,所以按$time$为第一关键字,$lv$为第二关键字排序,第一维满足条件,第二维用set维护
-！！！！！！！不是set啊QAQAQAQAQ,set不计重复啊QAQAQAQ,multiset啊QAQAQAQ
-多组数据啊！！！！看题啊！！！！
-考场心态也有些问题,一直肛一个假算法,没有认真想,最后半个小时才写了正解,multisetQAQ</p>
-<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3714" target="_blank" rel="external">HDU3714 Error Curves</a></h2>
-<h3>题目大意:</h3>
-<p>给定$n$个向上开口的二次函数,定义新函数为$n$个函数的最大值,询问极值点大小</p>
-<h3>题解:</h3>
-<p>拼起来还是一个向上开口的单峰函数,三分即可
-注意三分次数加大/eps变小</p>
-<h2><a href="http://acm.hit.edu.cn/hojx/showcontest/40/G/" target="_blank" rel="external">HOJ3244</a></h2>
-<h3>题目大意:</h3>
-<p>给定$n$个橘子,且每个橘子有$x[i]$瓣,每个橘子只能均分(7=3+4=1+2+2+2),要分给$m$个人并且分的最少的人分的尽量多</p>
-<h3>题解:</h3>
-<p>算法一:二分答案,拆分橘子时每层最多2个瓣数,分别记录下
-算法二:每次分割最大的橘子,瓣数一旦够$m$个人就输出现在最小的橘子</p>
-<h2><a href="http://poj.org/problem?id=3258" target="_blank" rel="external">POJ3258</a></h2>
-<h3>题解:</h3>
-<p>奶牛题,我那年NOIPD2T1</p>
-<h2><a href="http://poj.org/problem?id=3579" target="_blank" rel="external">POJ3579</a></h2>
-<h3>题目大意:</h3>
-<p>给定$n$个数,两两之间差的绝对值组成新数列,询问新数列的中位数</p>
-<h3>题解:</h3>
-<p>二分中位数,对原数列排序,然后找新数列里小于中位数和大于中位数的数的个数,判断是否为中位数</p>
-<h2><a href="http://poj.org/problem?id=2976" target="_blank" rel="external">POJ2976</a></h2>
-<h3>题目大意:</h3>
-<p>给定$n$个二元组$(x_i,y_i)$,至少取$m$对,使得$\frac{\sum x_i}{\sum y_i}$最大</p>
-<h3>题解:</h3>
-<p>01分数划分
-二分答案,$\frac{\sum a_i}{\sum  b_i}\ge mid$
-$\sum a_i\ge mid*\sum b_i $
-$\sum (a_i-mid*b_i)\ge 0$</p>
+        <p>今天的内容是贪心,二分和三分<br><a id="more"></a></p>
+<h2 id="CF651A"><a href="#CF651A" class="headerlink" title="CF651A"></a><a href="http://codeforces.com/problemset/problem/651/A" target="_blank" rel="external">CF651A</a></h2><h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h3><p>有两个手机,电量分别为$a,b$,使用一个每秒电量$-2$,另一个充电每秒$+1$,询问最多能玩几秒</p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解:"></a>题解:</h3><p>最开始没读明白题,以为是两个人游戏最晚到小于等于$0$,所以$1,1$时输出$1$,答案应该是$0$<br>贪心,每次玩电量最多的玩到差一点就没,另一个充电,直到不行</p>
+<h2 id="CF723C"><a href="#CF723C" class="headerlink" title="CF723C"></a><a href="http://codeforces.com/problemset/problem/723/C" target="_blank" rel="external">CF723C</a></h2><h3 id="题解-1"><a href="#题解-1" class="headerlink" title="题解:"></a>题解:</h3><p>玄学,,,,莫名其妙,,,,这,,,,C？</p>
+<h2 id="POJ1700-Crossing-River"><a href="#POJ1700-Crossing-River" class="headerlink" title="POJ1700 Crossing River"></a><a href="http://poj.org/problem?id=1700" target="_blank" rel="external">POJ1700 Crossing River</a></h2><h3 id="题目大意-1"><a href="#题目大意-1" class="headerlink" title="题目大意:"></a>题目大意:</h3><p>有$n$个人要过河,船每次最多装$2$个人,每次过河时间为船上过河时间最长的人的时间,寻最少多长时间所有人都能到对岸</p>
+<h3 id="题解-2"><a href="#题解-2" class="headerlink" title="题解:"></a>题解:</h3><p>经典问题啊,我不会啊QAQAQ<br>是这样的,有两个决策方案<br>第一个比较明显,用时间最短的人把所有人带过去,这样用时最短的人回来用时少<br>第二个方案是,用时最大的两个人一起过去,这样次大的时间就没了,他俩过取前先让最小和次小过去,并留下一个,这个是为了把最大次大带过去的船带回来<br>这两个方案合起来(比较哪个更优)就是答案</p>
+<h2 id="HDU1789-Doing-Homework-again"><a href="#HDU1789-Doing-Homework-again" class="headerlink" title="HDU1789 Doing Homework again"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1789" target="_blank" rel="external">HDU1789 Doing Homework again</a></h2><h3 id="题目大意-2"><a href="#题目大意-2" class="headerlink" title="题目大意:"></a>题目大意:</h3><p>给定一堆deadline,每件事需要做一天,并且有一个价值,询问最少丢掉的价值</p>
+<h3 id="题解-3"><a href="#题解-3" class="headerlink" title="题解:"></a>题解:</h3><p>按照价值排序,安排在临近deadline的日子里</p>
+<h2 id="HDU4864-Task"><a href="#HDU4864-Task" class="headerlink" title="HDU4864 Task"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4864" target="_blank" rel="external">HDU4864 Task</a></h2><h3 id="题目大意-3"><a href="#题目大意-3" class="headerlink" title="题目大意:"></a>题目大意:</h3><p>给定$n$个机器和$m$件任务,机器的运行时间和等级必须大于等于任务的才能有收益,第$i$件任务的收益为$time<em>500+lv</em>2$,询问最大收益</p>
+<h3 id="题解-4"><a href="#题解-4" class="headerlink" title="题解:"></a>题解:</h3><p>因为$time$的权重大,所以按$time$为第一关键字,$lv$为第二关键字排序,第一维满足条件,第二维用set维护<br>！！！！！！！不是set啊QAQAQAQAQ,set不计重复啊QAQAQAQ,multiset啊QAQAQAQ<br>多组数据啊！！！！看题啊！！！！<br>考场心态也有些问题,一直肛一个假算法,没有认真想,最后半个小时才写了正解,multisetQAQ</p>
+<h2 id="HDU3714-Error-Curves"><a href="#HDU3714-Error-Curves" class="headerlink" title="HDU3714 Error Curves"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3714" target="_blank" rel="external">HDU3714 Error Curves</a></h2><h3 id="题目大意-4"><a href="#题目大意-4" class="headerlink" title="题目大意:"></a>题目大意:</h3><p>给定$n$个向上开口的二次函数,定义新函数为$n$个函数的最大值,询问极值点大小</p>
+<h3 id="题解-5"><a href="#题解-5" class="headerlink" title="题解:"></a>题解:</h3><p>拼起来还是一个向上开口的单峰函数,三分即可<br>注意三分次数加大/eps变小</p>
+<h2 id="HOJ3244"><a href="#HOJ3244" class="headerlink" title="HOJ3244"></a><a href="http://acm.hit.edu.cn/hojx/showcontest/40/G/" target="_blank" rel="external">HOJ3244</a></h2><h3 id="题目大意-5"><a href="#题目大意-5" class="headerlink" title="题目大意:"></a>题目大意:</h3><p>给定$n$个橘子,且每个橘子有$x[i]$瓣,每个橘子只能均分(7=3+4=1+2+2+2),要分给$m$个人并且分的最少的人分的尽量多</p>
+<h3 id="题解-6"><a href="#题解-6" class="headerlink" title="题解:"></a>题解:</h3><p>算法一:二分答案,拆分橘子时每层最多2个瓣数,分别记录下<br>算法二:每次分割最大的橘子,瓣数一旦够$m$个人就输出现在最小的橘子</p>
+<h2 id="POJ3258"><a href="#POJ3258" class="headerlink" title="POJ3258"></a><a href="http://poj.org/problem?id=3258" target="_blank" rel="external">POJ3258</a></h2><h3 id="题解-7"><a href="#题解-7" class="headerlink" title="题解:"></a>题解:</h3><p>奶牛题,我那年NOIPD2T1</p>
+<h2 id="POJ3579"><a href="#POJ3579" class="headerlink" title="POJ3579"></a><a href="http://poj.org/problem?id=3579" target="_blank" rel="external">POJ3579</a></h2><h3 id="题目大意-6"><a href="#题目大意-6" class="headerlink" title="题目大意:"></a>题目大意:</h3><p>给定$n$个数,两两之间差的绝对值组成新数列,询问新数列的中位数</p>
+<h3 id="题解-8"><a href="#题解-8" class="headerlink" title="题解:"></a>题解:</h3><p>二分中位数,对原数列排序,然后找新数列里小于中位数和大于中位数的数的个数,判断是否为中位数</p>
+<h2 id="POJ2976"><a href="#POJ2976" class="headerlink" title="POJ2976"></a><a href="http://poj.org/problem?id=2976" target="_blank" rel="external">POJ2976</a></h2><h3 id="题目大意-7"><a href="#题目大意-7" class="headerlink" title="题目大意:"></a>题目大意:</h3><p>给定$n$个二元组$(x_i,y_i)$,至少取$m$对,使得$\frac{\sum x_i}{\sum y_i}$最大</p>
+<h3 id="题解-9"><a href="#题解-9" class="headerlink" title="题解:"></a>题解:</h3><p>01分数划分<br>二分答案,$\frac{\sum a_i}{\sum  b_i}\ge mid$<br>$\sum a_i\ge mid<em>\sum b_i $<br>$\sum (a_i-mid</em>b_i)\ge 0$</p>
 
       
     </div>
@@ -538,7 +496,7 @@ $\sum (a_i-mid*b_i)\ge 0$</p>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">CF651A</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">CF723C</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.1.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">POJ1700 Crossing River</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.2.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">HDU1789 Doing Homework again</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.2.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">HDU4864 Task</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.2.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">HDU3714 Error Curves</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">6.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">6.2.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">HOJ3244</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">7.2.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">8.</span> <span class="nav-text">POJ3258</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">8.1.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">9.</span> <span class="nav-text">POJ3579</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">9.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">9.2.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">10.</span> <span class="nav-text">POJ2976</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">10.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">10.2.</span> <span class="nav-text">题解:</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CF651A"><span class="nav-number">1.</span> <span class="nav-text">CF651A</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意"><span class="nav-number">1.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解"><span class="nav-number">1.2.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CF723C"><span class="nav-number">2.</span> <span class="nav-text">CF723C</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-1"><span class="nav-number">2.1.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POJ1700-Crossing-River"><span class="nav-number">3.</span> <span class="nav-text">POJ1700 Crossing River</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意-1"><span class="nav-number">3.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-2"><span class="nav-number">3.2.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HDU1789-Doing-Homework-again"><span class="nav-number">4.</span> <span class="nav-text">HDU1789 Doing Homework again</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意-2"><span class="nav-number">4.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-3"><span class="nav-number">4.2.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HDU4864-Task"><span class="nav-number">5.</span> <span class="nav-text">HDU4864 Task</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意-3"><span class="nav-number">5.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-4"><span class="nav-number">5.2.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HDU3714-Error-Curves"><span class="nav-number">6.</span> <span class="nav-text">HDU3714 Error Curves</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意-4"><span class="nav-number">6.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-5"><span class="nav-number">6.2.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HOJ3244"><span class="nav-number">7.</span> <span class="nav-text">HOJ3244</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意-5"><span class="nav-number">7.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-6"><span class="nav-number">7.2.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POJ3258"><span class="nav-number">8.</span> <span class="nav-text">POJ3258</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-7"><span class="nav-number">8.1.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POJ3579"><span class="nav-number">9.</span> <span class="nav-text">POJ3579</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意-6"><span class="nav-number">9.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-8"><span class="nav-number">9.2.</span> <span class="nav-text">题解:</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#POJ2976"><span class="nav-number">10.</span> <span class="nav-text">POJ2976</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意-7"><span class="nav-number">10.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-9"><span class="nav-number">10.2.</span> <span class="nav-text">题解:</span></a></li></ol></li></ol></div>
             
 
           </div>
