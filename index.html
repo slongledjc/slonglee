@@ -330,65 +330,14 @@
 
       
         
-          
-            <p>Splay专场,码不出裸题的我无可奈何去颓废
-&lt;!--more--&gt;</p>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3223" target="_blank" rel="external">BZOJ3223文艺平衡树</a></h2>
-<h3>题目大意:</h3>
-<p>支持区间翻转操作</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3224" target="_blank" rel="external">BZOJ3224普通平衡树</a></h2>
-<h3>题目大意:</h3>
-<p>支持:
-1.插入x数
-2.删除x数(若有多个相同的数，因只删除一个)
-3.查询x数的排名(若有多个相同的数，因输出最小的排名)
-4.查询排名为x的数
-5.求x的前驱(前驱定义为小于x，且最大的数)
-6.求x的后继(后继定义为大于x，且最小的数)</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=4864" target="_blank" rel="external">BZOJ4864神秘物质</a></h2>
-<h3>题目大意:</h3>
-<p>对于一个序列支持:
-插入,删除
-询问一个区间内所有长度大于$1$的区间的最大,最小极差</p>
-<h3>题解:</h3>
-<p>最大极差维护区间最大值最小值即可
-一个性质:最小极差一定为相邻两个数差的绝对值
-证明:如果左右扩展出更大或更小不会更优,如果不大也不小会更新但也是相邻两个</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1500" target="_blank" rel="external">BZOJ1500维修数列</a></h2>
-<h3>题目大意:</h3>
-<p>要求支持插入,删除,翻转,区间整体赋值,求一段的和,求区间最最大子段和</p>
-<h3>题解:</h3>
-<p>经典题,维护子树的和,子树最大字段和,左端点开始最大子段和,右端点结尾最大子段和,翻转标记,区间整体赋值标记</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=2809" target="_blank" rel="external">BZOJ2809</a></h2>
-<h3>题目大意:</h3>
-<p>给定一个树结构,每个点有两个值$a_i,b_i$,要找到一个节点$pos$作为父节点,在他及其子树中找到尽可能多的节点$(cnt$个点$)$,但 $\sum{b_i}&lt;m$ ,询问 $max(a_{pos}*cnt)$</p>
-<h3>题解:</h3>
-<p>子树尽可能选多每次尽可能取小的即可
-这样我们枚举父节点,用可并堆处理即可</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3196" target="_blank" rel="external">BZOJ3196二逼平衡树</a></h2>
-<h3>题目大意:</h3>
-<p>1.查询k在区间内的排名
-2.查询区间内排名为k的值
-3.修改某一位值上的数值
-4.查询k在区间内的前驱(前驱定义为小于x，且最大的数)
-5.查询k在区间内的后继(后继定义为大于x，且最小的数)</p>
-<h3>题解:</h3>
-<p>分块大法好
-不涉及插入,分块大法好
-3.修改只要每次<code>rebuild</code>即可
-1.查询区间内比k小的数
-2.二分答案,查询排名判断
-4.查询区间内比x小最大的数
-5.查询区间内比x大最小的数
-$O(mlogX_i\sqrt{n}log{n})$</p>
-<h3><a href="">CODE</a></h3>
-
-          
+          <p>Splay专场,码不出裸题的我无可奈何去颓废<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day11/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -505,12 +454,14 @@ $O(mlogX_i\sqrt{n}log{n})$</p>
 
       
         
-          
-            <p>今天是线段树+树状数组(强烈差评)
-&lt;!--more--&gt;</p>
-<h2></h2>
-
-          
+          <p>今天是线段树+树状数组(强烈差评)<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day10/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -627,25 +578,14 @@ $O(mlogX_i\sqrt{n}log{n})$</p>
 
       
         
-          
-            <p>简单图论2
-&lt;!--more--&gt;</p>
-<h2><a href="">POJ1236</a></h2>
-<h3>题目大意:</h3>
-<p>给定$n$给点,$m$条有向边,询问:
-1.有多少强联通分量
-2.最少再添加多少条边,使得形成一个包含所有点的强联通分量</p>
-<h3>题解:</h3>
-<p>有向图求完SCC会得到一个DAG图,将它变为一个强连通图
-构造一个强连通分量,最少添加$max{$入度为0点个数,出度为0点个数$}$条边
-注意缩完点之后只有一个点的情况</p>
-<h2><a href="">POJ3352</a></h2>
-<h3>题目大意:</h3>
-<p>给定一张无向图,询问最少加多少边,形成一个包含所有点的边双连通图</p>
-<h3>题解:</h3>
-<p>边双缩点之后,生成一棵树</p>
-
-          
+          <p>今天是图的连通性和拓扑排序<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day9/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -762,38 +702,14 @@ $O(mlogX_i\sqrt{n}log{n})$</p>
 
       
         
-          
-            <p>有欧拉回路的简单图论1?
-&lt;!--more--&gt;</p>
-<h2><a href="">HOJ3204</a></h2>
-<h3>题目大意:</h3>
-<p>给定一棵树,询问最少画几笔能全部覆盖</p>
-<h3>题解:</h3>
-<h2><a href="">CF508D</a></h2>
-<h3>题目大意:</h3>
-<p>给定$n$个长度为$3$的串,询问能否拼成原来长度为$n+2$的串,如果能输出原串</p>
-<h3>题解:</h3>
-<h2><a href="">POJ3660</a></h2>
-<h3>题目大意:</h3>
-<p>给定$m$场比赛的胜负情况,询问有多少人的排名能够确定</p>
-<h3>题解:</h3>
-<h2><a href="">HDU5637</a></h2>
-<h3>题目大意:</h3>
-<p>给定一个集合$S(|S|\le 15)$,对于一个数字现在有两种操作
-1.对这个数字某个二进制位取反
-2.将这个数字与集合中一个数取亦或
-每次询问要使$l$到$r$最少操作次数</p>
-<h3>题解:</h3>
-<h2><a href="">CF545E</a></h2>
-<h3>题目大意:</h3>
-<p>求最短路径树,且要求树边尽可能小</p>
-<h3>题解:</h3>
-<h2><a href="">HDU5521</a></h2>
-<h3>题目大意:</h3>
-<p>给定若干个集合,集合内部任意两点距离为$E_i$,询问两个人同时从$1$和$n$出发,最快能在哪个节点相遇,按字典序输出可能的位置</p>
-<h3>题解:</h3>
-
-          
+          <p>有欧拉回路的简单图论1?<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day8/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -910,20 +826,14 @@ $O(mlogX_i\sqrt{n}log{n})$</p>
 
       
         
-          
-            <p>论如何一步步走向爆炸+崩溃
-&lt;!--more--&gt;
-1.不断返回的WA
-读题失败
-RT(数组开小)
-读入输出LL用&quot;%d&quot;
-RMQ没用(int)(log(n)/log(2))
-2.各种被翻盘
-逆风不跟榜
-顺风不跟榜
-xjb打法</p>
-
-          
+          <p>论如何一步步走向爆炸+崩溃<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Week1-总结/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1040,11 +950,14 @@ xjb打法</p>
 
       
         
-          
-            <p>考试日
-&lt;!--more--&gt;</p>
-
-          
+          <p>考试日<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day6/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1161,12 +1074,14 @@ xjb打法</p>
 
       
         
-          
-            <p>基础数据结构
-&lt;!--more--&gt;</p>
-<h2>[HDU1870]</h2>
-
-          
+          <p>基础数据结构<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day5/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1283,34 +1198,14 @@ xjb打法</p>
 
       
         
-          
-            <p>简单分治
-&lt;!--more--&gt;</p>
-<h2><a href="">POJ1002</a></h2>
-<h3>反思:</h3>
-<p>读题要完整要仔细,漏掉情况对信心打击非常大
-宁可慢一点,又不是手速选手</p>
-<h2><a href="">CF448C</a></h2>
-<h3>题目大意:</h3>
-<p>给定$n$块篱笆的高度,可以横着刷或竖着,者询问最少刷几次</p>
-<h3>题解:</h3>
-<p>解决$[l,r]$,有两种方案:</p>
-<ul>
-<li>竖着刷$r-l+1$次</li>
-<li>横着刷,在区间内找最矮的计入答案,分开的区间再分别计算</li>
-</ul>
-<h2><a href="">HOJ2558</a></h2>
-<h3>题目大意:</h3>
-<p>最大子矩阵</p>
-<h3>题解:</h3>
-<p>枚举矩形的左边界和右边界,然后对每行求和,就变成了最大子段和</p>
-<h2><a href="">CF768B</a></h2>
-<h3>题目大意:</h3>
-<p>给定一个只有一个元素$n(n\le 2^{50})$的序列,每次从序列里取一个非$0$非$1$的元素$x$,删除并在原位置加入$\lfloor\frac{x}{2}\rfloor$,$x%2$,$\lfloor\frac{x}{2}\rfloor$直到序列全为$0$或$1$
-询问$[l,r]$内$1$的个数</p>
-<h3>题解:</h3>
-
-          
+          <p>简单分治<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day4/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1427,11 +1322,14 @@ xjb打法</p>
 
       
         
-          
-            <p>今天是简单DP
-&lt;!--more--&gt;</p>
-
-          
+          <p>今天是简单DP<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day3/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1548,23 +1446,14 @@ xjb打法</p>
 
       
         
-          
-            <p>今天是搜索,17题
-&lt;!--more--&gt;</p>
-<h2><a href="http://acm.hit.edu.cn/hojx/showcontest/45/C/" target="_blank" rel="external">HOJ3237</a></h2>
-<h3>反思:</h3>
-<p>最短路类不要写记忆化,写SPFA！
-Yes打成YES</p>
-<h2><a href="http://acm.hit.edu.cn/hojx/showcontest/45/G/" target="_blank" rel="external">HOJ2120</a></h2>
-<h3>反思:</h3>
-<p>对极端数据的判断</p>
-<h2><a href="">CF653E</a></h2>
-<h3>题目大意:</h3>
-<p>给定$m$对不能连接的边,以及$1$号节点的出度,判断是否能生成一棵树</p>
-<h3>题解:</h3>
-<p>从</p>
-
-          
+          <p>今天是搜索,17题<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day2/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
