@@ -330,14 +330,70 @@
 
       
         
-          <p>今天的内容是贪心,二分和三分<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/09/HIT2017-Day1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <p>今天的内容是贪心,二分和三分
+&lt;!-- more --&gt;</p>
+<h2><a href="http://codeforces.com/problemset/problem/651/A" target="_blank" rel="external">CF651A</a></h2>
+<h3>题目大意:</h3>
+<p>有两个手机,电量分别为$a,b$,使用一个每秒电量$-2$,另一个充电每秒$+1$,询问最多能玩几秒</p>
+<h3>题解:</h3>
+<p>最开始没读明白题,以为是两个人游戏最晚到小于等于$0$,所以$1,1$时输出$1$,答案应该是$0$
+贪心,每次玩电量最多的玩到差一点就没,另一个充电,直到不行</p>
+<h2><a href="http://codeforces.com/problemset/problem/723/C" target="_blank" rel="external">CF723C</a></h2>
+<h3>题解:</h3>
+<p>玄学,,,,莫名其妙,,,,这,,,,C？</p>
+<h2><a href="http://poj.org/problem?id=1700" target="_blank" rel="external">POJ1700 Crossing River</a></h2>
+<h3>题目大意:</h3>
+<p>有$n$个人要过河,船每次最多装$2$个人,每次过河时间为船上过河时间最长的人的时间,寻最少多长时间所有人都能到对岸</p>
+<h3>题解:</h3>
+<p>经典问题啊,我不会啊QAQAQ
+是这样的,有两个决策方案
+第一个比较明显,用时间最短的人把所有人带过去,这样用时最短的人回来用时少
+第二个方案是,用时最大的两个人一起过去,这样次大的时间就没了,他俩过取前先让最小和次小过去,并留下一个,这个是为了把最大次大带过去的船带回来
+这两个方案合起来(比较哪个更优)就是答案</p>
+<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1789" target="_blank" rel="external">HDU1789 Doing Homework again</a></h2>
+<h3>题目大意:</h3>
+<p>给定一堆deadline,每件事需要做一天,并且有一个价值,询问最少丢掉的价值</p>
+<h3>题解:</h3>
+<p>按照价值排序,安排在临近deadline的日子里</p>
+<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4864" target="_blank" rel="external">HDU4864 Task</a></h2>
+<h3>题目大意:</h3>
+<p>给定$n$个机器和$m$件任务,机器的运行时间和等级必须大于等于任务的才能有收益,第$i$件任务的收益为$time<em>500+lv</em>2$,询问最大收益</p>
+<h3>题解:</h3>
+<p>因为$time$的权重大,所以按$time$为第一关键字,$lv$为第二关键字排序,第一维满足条件,第二维用set维护
+！！！！！！！不是set啊QAQAQAQAQ,set不计重复啊QAQAQAQ,multiset啊QAQAQAQ
+多组数据啊！！！！看题啊！！！！
+考场心态也有些问题,一直肛一个假算法,没有认真想,最后半个小时才写了正解,multisetQAQ</p>
+<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3714" target="_blank" rel="external">HDU3714 Error Curves</a></h2>
+<h3>题目大意:</h3>
+<p>给定$n$个向上开口的二次函数,定义新函数为$n$个函数的最大值,询问极值点大小</p>
+<h3>题解:</h3>
+<p>拼起来还是一个向上开口的单峰函数,三分即可
+注意三分次数加大/eps变小</p>
+<h2><a href="http://acm.hit.edu.cn/hojx/showcontest/40/G/" target="_blank" rel="external">HOJ3244</a></h2>
+<h3>题目大意:</h3>
+<p>给定$n$个橘子,且每个橘子有$x[i]$瓣,每个橘子只能均分(7=3+4=1+2+2+2),要分给$m$个人并且分的最少的人分的尽量多</p>
+<h3>题解:</h3>
+<p>算法一:二分答案,拆分橘子时每层最多2个瓣数,分别记录下
+算法二:每次分割最大的橘子,瓣数一旦够$m$个人就输出现在最小的橘子</p>
+<h2><a href="http://poj.org/problem?id=3258" target="_blank" rel="external">POJ3258</a></h2>
+<h3>题解:</h3>
+<p>奶牛题,我那年NOIPD2T1</p>
+<h2><a href="http://poj.org/problem?id=3579" target="_blank" rel="external">POJ3579</a></h2>
+<h3>题目大意:</h3>
+<p>给定$n$个数,两两之间差的绝对值组成新数列,询问新数列的中位数</p>
+<h3>题解:</h3>
+<p>二分中位数,对原数列排序,然后找新数列里小于中位数和大于中位数的数的个数,判断是否为中位数</p>
+<h2><a href="http://poj.org/problem?id=2976" target="_blank" rel="external">POJ2976</a></h2>
+<h3>题目大意:</h3>
+<p>给定$n$个二元组$(x_i,y_i)$,至少取$m$对,使得$\frac{\sum x_i}{\sum y_i}$最大</p>
+<h3>题解:</h3>
+<p>01分数划分
+二分答案,$\frac{\sum a_i}{\sum  b_i}\ge mid$
+$\sum a_i\ge mid*\sum b_i $
+$\sum (a_i-mid*b_i)\ge 0$</p>
+
+          
         
       
     </div>
