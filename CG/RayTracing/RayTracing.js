@@ -268,5 +268,5 @@ function generate(){
         document.getElementById('renderCanvas'), 
         new Union([plane,sphere1,sphere2,sphere3,sphere4]),
         new PerspectiveCamera(new Vector3(0,15,20), new Vector3(0,0,-1).normalize(), new Vector3(0,1,0),90),
-        4);
+        3);
 }
