@@ -330,38 +330,14 @@
 
       
         
-          
-            <p>今天是图的连通性和拓扑排序
-&lt;!--more--&gt;</p>
-<h2><a href="http://poj.org/problem?id=1236" target="_blank" rel="external">POJ1236</a></h2>
-<h3>题目大意:</h3>
-<p>给定$n$给点,$m$条有向边,询问:
-1.有多少强联通分量
-2.最少再添加多少条边,使得形成一个包含所有点的强联通分量</p>
-<h3>题解:</h3>
-<p>有向图求完SCC会得到一个DAG图,将它变为一个强连通图
-构造一个强连通分量,最少添加$max{$入度为0点个数,出度为0点个数$}$条边
-注意缩完点之后只有一个点的情况</p>
-<h3><a href="http://poj.org/showsource?solution_id=17434763" target="_blank" rel="external">CODE</a></h3>
-<h2><a href="http://poj.org/problem?id=3352" target="_blank" rel="external">POJ3352</a></h2>
-<h3>题目大意:</h3>
-<p>给定一张无向图,询问最少加多少边,形成一个包含所有点的边双连通图</p>
-<h3>题解:</h3>
-<p>边双缩点之后,生成一棵树
-构造边双的方法是将叶子结点每两个连起来,$ans=\frac{叶子节点数+1}{2}$</p>
-<h3><a href="http://poj.org/showsource?solution_id=17438633" target="_blank" rel="external">CODE</a></h3>
-<h2><a href="http://codeforces.com/problemset/problem/515/d" target="_blank" rel="external">CF515D</a></h2>
-<h3>题目大意:</h3>
-<p>给定一个棋盘,用$1*2$的块去填满,询问可行还是答案不唯一</p>
-<h3>题解:</h3>
-<p>每个空格周围四个点中空格的个数为度数,每次取度数为1的点,
-有多个就不唯一,没有就不存在,取出后更新四周的点</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://poj.org/problem?id=2585" target="_blank" rel="external">POJ2585</a></h2>
-<h3>题目大意:</h3>
-<h3>题解:</h3>
-
-          
+          <p>今天是图的连通性和拓扑排序<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day9/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -478,53 +454,14 @@
 
       
         
-          
-            <p>有欧拉回路的简单图论1?
-&lt;!--more--&gt;</p>
-<h2><a href="http://acm.hit.edu.cn/hoj/problem/view?id=3204" target="_blank" rel="external">HOJ3204</a></h2>
-<h3>题目大意:</h3>
-<p>给定一棵树,询问最少画几笔能全部覆盖所有边</p>
-<h3>题解:</h3>
-<p>结论:一棵树奇度节点个数为偶数个
-每次删除两个奇度节点即可</p>
-<h3><a href="http://acm.hit.edu.cn/hoj/status/run?id=834826" target="_blank" rel="external">CODE</a></h3>
-<h2><a href="http://codeforces.com/problemset/problem/508/D" target="_blank" rel="external">CF508D</a></h2>
-<h3>题目大意:</h3>
-<p>给定$n$个长度为$3$的串,询问能否拼成原来长度为$n+2$的串,如果能输出原串</p>
-<h3>题解:</h3>
-<p>对于每个长度为$3$的串,用前两个字符和后两个字符各建两个点,并连一条边代表这个长度为$3$的串,然后就是在这个图上找一个欧拉路径了</p>
-<h3><a href="http://codeforces.com/contest/508/submission/29366679" target="_blank" rel="external">CODE</a></h3>
-<h2><a href="http://poj.org/problem?id=3660" target="_blank" rel="external">POJ3660</a></h2>
-<h3>题目大意:</h3>
-<p>给定$m$场比赛的胜负情况,询问有多少人的排名能够确定</p>
-<h3>题解:</h3>
-<p>如果比他强的人数$+$比他弱的人数$=n-1$,那么他的排名就能确定
-用传递闭包来做即可
-floyd写错QAQ</p>
-<h3><a href="http://poj.org/showsource?solution_id=17467099" target="_blank" rel="external">CODE</a></h3>
-<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5637" target="_blank" rel="external">HDU5637</a></h2>
-<h3>题目大意:</h3>
-<p>给定一个集合$S(|S|\le 15)$,对于一个数字现在有两种操作
-1.对这个数字某个二进制位取反
-2.将这个数字与集合中一个数取亦或
-每次询问要使$l$到$r$最少操作次数</p>
-<h3>题解:</h3>
-<p>二进制某一位取反相当于亦或上<code>1&lt;&lt;i</code>,这样两个操作变为一个操作
-然后$l\oplus a\oplus b...=r$等价于$a\oplus b\oplus ...=l\oplus r$
-预处理最短路即可</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://codeforces.com/problemset/problem/545/E" target="_blank" rel="external">CF545E</a></h2>
-<h3>题目大意:</h3>
-<p>求最短路径树,且要求树边尽可能小</p>
-<h3>题解:</h3>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5521" target="_blank" rel="external">HDU5521</a></h2>
-<h3>题目大意:</h3>
-<p>给定若干个集合,集合内部任意两点距离为$E_i$,询问两个人同时从$1$和$n$出发,最快能在哪个节点相遇,按字典序输出可能的位置</p>
-<h3>题解:</h3>
-<h3><a href="">CODE</a></h3>
-
-          
+          <p>有欧拉回路的简单图论1?<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day8/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -641,20 +578,14 @@ floyd写错QAQ</p>
 
       
         
-          
-            <p>论如何一步步走向爆炸+崩溃
-&lt;!--more--&gt;
-1.不断返回的WA
-读题失败
-RT(数组开小)
-读入输出LL用&quot;%d&quot;
-RMQ没用(int)(log(n)/log(2))
-2.各种被翻盘
-逆风不跟榜
-顺风不跟榜
-xjb打法</p>
-
-          
+          <p>论如何一步步走向爆炸+崩溃<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Week1-总结/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -771,11 +702,14 @@ xjb打法</p>
 
       
         
-          
-            <p>考试日
-&lt;!--more--&gt;</p>
-
-          
+          <p>考试日<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day6/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -892,12 +826,14 @@ xjb打法</p>
 
       
         
-          
-            <p>基础数据结构
-&lt;!--more--&gt;</p>
-<h2>[HDU1870]</h2>
-
-          
+          <p>基础数据结构<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day5/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1014,34 +950,14 @@ xjb打法</p>
 
       
         
-          
-            <p>简单分治
-&lt;!--more--&gt;</p>
-<h2><a href="">POJ1002</a></h2>
-<h3>反思:</h3>
-<p>读题要完整要仔细,漏掉情况对信心打击非常大
-宁可慢一点,又不是手速选手</p>
-<h2><a href="">CF448C</a></h2>
-<h3>题目大意:</h3>
-<p>给定$n$块篱笆的高度,可以横着刷或竖着,者询问最少刷几次</p>
-<h3>题解:</h3>
-<p>解决$[l,r]$,有两种方案:</p>
-<ul>
-<li>竖着刷$r-l+1$次</li>
-<li>横着刷,在区间内找最矮的计入答案,分开的区间再分别计算</li>
-</ul>
-<h2><a href="">HOJ2558</a></h2>
-<h3>题目大意:</h3>
-<p>最大子矩阵</p>
-<h3>题解:</h3>
-<p>枚举矩形的左边界和右边界,然后对每行求和,就变成了最大子段和</p>
-<h2><a href="">CF768B</a></h2>
-<h3>题目大意:</h3>
-<p>给定一个只有一个元素$n(n\le 2^{50})$的序列,每次从序列里取一个非$0$非$1$的元素$x$,删除并在原位置加入$\lfloor\frac{x}{2}\rfloor$,$x%2$,$\lfloor\frac{x}{2}\rfloor$直到序列全为$0$或$1$
-询问$[l,r]$内$1$的个数</p>
-<h3>题解:</h3>
-
-          
+          <p>简单分治<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day4/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1158,11 +1074,14 @@ xjb打法</p>
 
       
         
-          
-            <p>今天是简单DP
-&lt;!--more--&gt;</p>
-
-          
+          <p>今天是简单DP<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day3/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1279,23 +1198,14 @@ xjb打法</p>
 
       
         
-          
-            <p>今天是搜索,17题
-&lt;!--more--&gt;</p>
-<h2><a href="http://acm.hit.edu.cn/hojx/showcontest/45/C/" target="_blank" rel="external">HOJ3237</a></h2>
-<h3>反思:</h3>
-<p>最短路类不要写记忆化,写SPFA！
-Yes打成YES</p>
-<h2><a href="http://acm.hit.edu.cn/hojx/showcontest/45/G/" target="_blank" rel="external">HOJ2120</a></h2>
-<h3>反思:</h3>
-<p>对极端数据的判断</p>
-<h2><a href="">CF653E</a></h2>
-<h3>题目大意:</h3>
-<p>给定$m$对不能连接的边,以及$1$号节点的出度,判断是否能生成一棵树</p>
-<h3>题解:</h3>
-<p>从</p>
-
-          
+          <p>今天是搜索,17题<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day2/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1412,70 +1322,14 @@ Yes打成YES</p>
 
       
         
-          
-            <p>今天的内容是贪心,二分和三分
-&lt;!-- more --&gt;</p>
-<h2><a href="http://codeforces.com/problemset/problem/651/A" target="_blank" rel="external">CF651A</a></h2>
-<h3>题目大意:</h3>
-<p>有两个手机,电量分别为$a,b$,使用一个每秒电量$-2$,另一个充电每秒$+1$,询问最多能玩几秒</p>
-<h3>题解:</h3>
-<p>最开始没读明白题,以为是两个人游戏最晚到小于等于$0$,所以$1,1$时输出$1$,答案应该是$0$
-贪心,每次玩电量最多的玩到差一点就没,另一个充电,直到不行</p>
-<h2><a href="http://codeforces.com/problemset/problem/723/C" target="_blank" rel="external">CF723C</a></h2>
-<h3>题解:</h3>
-<p>玄学,,,,莫名其妙,,,,这,,,,C？</p>
-<h2><a href="http://poj.org/problem?id=1700" target="_blank" rel="external">POJ1700 Crossing River</a></h2>
-<h3>题目大意:</h3>
-<p>有$n$个人要过河,船每次最多装$2$个人,每次过河时间为船上过河时间最长的人的时间,寻最少多长时间所有人都能到对岸</p>
-<h3>题解:</h3>
-<p>经典问题啊,我不会啊QAQAQ
-是这样的,有两个决策方案
-第一个比较明显,用时间最短的人把所有人带过去,这样用时最短的人回来用时少
-第二个方案是,用时最大的两个人一起过去,这样次大的时间就没了,他俩过取前先让最小和次小过去,并留下一个,这个是为了把最大次大带过去的船带回来
-这两个方案合起来(比较哪个更优)就是答案</p>
-<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=1789" target="_blank" rel="external">HDU1789 Doing Homework again</a></h2>
-<h3>题目大意:</h3>
-<p>给定一堆deadline,每件事需要做一天,并且有一个价值,询问最少丢掉的价值</p>
-<h3>题解:</h3>
-<p>按照价值排序,安排在临近deadline的日子里</p>
-<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4864" target="_blank" rel="external">HDU4864 Task</a></h2>
-<h3>题目大意:</h3>
-<p>给定$n$个机器和$m$件任务,机器的运行时间和等级必须大于等于任务的才能有收益,第$i$件任务的收益为$time<em>500+lv</em>2$,询问最大收益</p>
-<h3>题解:</h3>
-<p>因为$time$的权重大,所以按$time$为第一关键字,$lv$为第二关键字排序,第一维满足条件,第二维用set维护
-！！！！！！！不是set啊QAQAQAQAQ,set不计重复啊QAQAQAQ,multiset啊QAQAQAQ
-多组数据啊！！！！看题啊！！！！
-考场心态也有些问题,一直肛一个假算法,没有认真想,最后半个小时才写了正解,multisetQAQ</p>
-<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3714" target="_blank" rel="external">HDU3714 Error Curves</a></h2>
-<h3>题目大意:</h3>
-<p>给定$n$个向上开口的二次函数,定义新函数为$n$个函数的最大值,询问极值点大小</p>
-<h3>题解:</h3>
-<p>拼起来还是一个向上开口的单峰函数,三分即可
-注意三分次数加大/eps变小</p>
-<h2><a href="http://acm.hit.edu.cn/hojx/showcontest/40/G/" target="_blank" rel="external">HOJ3244</a></h2>
-<h3>题目大意:</h3>
-<p>给定$n$个橘子,且每个橘子有$x[i]$瓣,每个橘子只能均分(7=3+4=1+2+2+2),要分给$m$个人并且分的最少的人分的尽量多</p>
-<h3>题解:</h3>
-<p>算法一:二分答案,拆分橘子时每层最多2个瓣数,分别记录下
-算法二:每次分割最大的橘子,瓣数一旦够$m$个人就输出现在最小的橘子</p>
-<h2><a href="http://poj.org/problem?id=3258" target="_blank" rel="external">POJ3258</a></h2>
-<h3>题解:</h3>
-<p>奶牛题,我那年NOIPD2T1</p>
-<h2><a href="http://poj.org/problem?id=3579" target="_blank" rel="external">POJ3579</a></h2>
-<h3>题目大意:</h3>
-<p>给定$n$个数,两两之间差的绝对值组成新数列,询问新数列的中位数</p>
-<h3>题解:</h3>
-<p>二分中位数,对原数列排序,然后找新数列里小于中位数和大于中位数的数的个数,判断是否为中位数</p>
-<h2><a href="http://poj.org/problem?id=2976" target="_blank" rel="external">POJ2976</a></h2>
-<h3>题目大意:</h3>
-<p>给定$n$个二元组$(x_i,y_i)$,至少取$m$对,使得$\frac{\sum x_i}{\sum y_i}$最大</p>
-<h3>题解:</h3>
-<p>01分数划分
-二分答案,$\frac{\sum a_i}{\sum  b_i}\ge mid$
-$\sum a_i\ge mid*\sum b_i $
-$\sum (a_i-mid*b_i)\ge 0$</p>
-
-          
+          <p>今天的内容是贪心,二分和三分<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/09/HIT2017-Day1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

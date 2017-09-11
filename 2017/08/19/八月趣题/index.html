@@ -94,17 +94,17 @@
 
 
 
-<meta name="description" content="八月,一些有趣的题目 &amp;lt;!--more--&amp;gt; HDU6133 题目大意: 给定一棵树,每个点都有一个权值且儿子数不超过$2$ 对于每个点,他子树中所有的权值升序形成一个序列$A$,那么他的答案是$\sum_{i=1}^{size} A[i]* (size-i+1)$ 输出每个点的答案 题解: 比赛时写了一个每个点的归并排序,但是会被一条链卡成$O(N^2)$ 问了一圈都是线段树合并,但">
+<meta name="description" content="八月,一些有趣的题目">
 <meta property="og:type" content="article">
 <meta property="og:title" content="八月趣题">
 <meta property="og:url" content="http://yoursite.com/2017/08/19/八月趣题/index.html">
 <meta property="og:site_name" content="slongle">
-<meta property="og:description" content="八月,一些有趣的题目 &amp;lt;!--more--&amp;gt; HDU6133 题目大意: 给定一棵树,每个点都有一个权值且儿子数不超过$2$ 对于每个点,他子树中所有的权值升序形成一个序列$A$,那么他的答案是$\sum_{i=1}^{size} A[i]* (size-i+1)$ 输出每个点的答案 题解: 比赛时写了一个每个点的归并排序,但是会被一条链卡成$O(N^2)$ 问了一圈都是线段树合并,但">
+<meta property="og:description" content="八月,一些有趣的题目">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-08-20T12:21:26.791Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="八月趣题">
-<meta name="twitter:description" content="八月,一些有趣的题目 &amp;lt;!--more--&amp;gt; HDU6133 题目大意: 给定一棵树,每个点都有一个权值且儿子数不超过$2$ 对于每个点,他子树中所有的权值升序形成一个序列$A$,那么他的答案是$\sum_{i=1}^{size} A[i]* (size-i+1)$ 输出每个点的答案 题解: 比赛时写了一个每个点的归并排序,但是会被一条链卡成$O(N^2)$ 问了一圈都是线段树合并,但">
+<meta name="twitter:description" content="八月,一些有趣的题目">
 
 
 
@@ -329,38 +329,12 @@
       
 
       
-        <p>八月,一些有趣的题目
-&lt;!--more--&gt;</p>
-<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6133" target="_blank" rel="external">HDU6133</a></h2>
-<h3>题目大意:</h3>
-<p>给定一棵树,每个点都有一个权值且儿子数不超过$2$<br>
-对于每个点,他子树中所有的权值升序形成一个序列$A$,那么他的答案是$\sum_{i=1}^{size} A[i]* (size-i+1)$<br>
-输出每个点的答案</p>
-<h3>题解:</h3>
-<p>比赛时写了一个每个点的归并排序,但是会被一条链卡成$O(N^2)$<br>
-问了一圈都是线段树合并,但是官方题解没有到啊,然后找到出题人才明白怎么做<br>
-对于一个序列$A$,我们现在想插入一个值$val$,我们要将小于$val$的所有值出现次数$+1$,也就是询问一个前缀和,然后$val$的出现次数是$sum-sum_{pre}$,还是询问前缀和,删除同理<br>
-所以这个过程我们离散化一下,插入进树状数组即可<br>
-我们dfs时先进左子树,出来之后清空,再做右子树,右子树出来后,再把左子树插入进去<br>
-但是为了减少插入删除次数,我们把字数个数多的节点当做右子树,这样每个点被访问次数为$logN$次</p>
-<h3><a href="http://acm.hdu.edu.cn/viewcode.php?rid=21788044" target="_blank" rel="external">CODE</a></h3>
-<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6155" target="_blank" rel="external">HDU6155</a></h2>
-<h3>题目大意:</h3>
-<p>给定一个01序列,有两种操作<br>
-1.对于一个区间01翻转<br>
-2.查询区间内不同的序列个数</p>
-<h3>题解:</h3>
-<p>线段树维护DP转移<br>
-$x[i]==0$<br>
-$dp[i][0]=dp[i-1][0]+dp[i-1][1]+1$<br>
-$dp[i][1]=dp[i-1][1]$
-$x[i]==1$<br>
-$dp[i][0]=dp[i-1][0]$<br>
-$dp[i][1]=dp[i-1][0]+dp[i-1][1]+1$<br>
-这个dp转移是线性的,用线段树维护矩阵转移<br>
-每次翻转有一个变换方式(待填坑)</p>
-<h3><a href="http://acm.hdu.edu.cn/viewcode.php?rid=21825575" target="_blank" rel="external">CODE</a></h3>
-
+        <p>八月,一些有趣的题目<br><a id="more"></a></p>
+<h2 id="HDU6133"><a href="#HDU6133" class="headerlink" title="HDU6133"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6133" target="_blank" rel="external">HDU6133</a></h2><h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h3><p>给定一棵树,每个点都有一个权值且儿子数不超过$2$<br>对于每个点,他子树中所有的权值升序形成一个序列$A$,那么他的答案是$\sum_{i=1}^{size} A[i]* (size-i+1)$<br>输出每个点的答案  </p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解:"></a>题解:</h3><p>比赛时写了一个每个点的归并排序,但是会被一条链卡成$O(N^2)$<br>问了一圈都是线段树合并,但是官方题解没有到啊,然后找到出题人才明白怎么做<br>对于一个序列$A$,我们现在想插入一个值$val$,我们要将小于$val$的所有值出现次数$+1$,也就是询问一个前缀和,然后$val$的出现次数是$sum-sum_{pre}$,还是询问前缀和,删除同理<br>所以这个过程我们离散化一下,插入进树状数组即可<br>我们dfs时先进左子树,出来之后清空,再做右子树,右子树出来后,再把左子树插入进去<br>但是为了减少插入删除次数,我们把字数个数多的节点当做右子树,这样每个点被访问次数为$logN$次  </p>
+<h3 id="CODE"><a href="#CODE" class="headerlink" title="CODE"></a><a href="http://acm.hdu.edu.cn/viewcode.php?rid=21788044" target="_blank" rel="external">CODE</a></h3><h2 id="HDU6155"><a href="#HDU6155" class="headerlink" title="HDU6155"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6155" target="_blank" rel="external">HDU6155</a></h2><h3 id="题目大意-1"><a href="#题目大意-1" class="headerlink" title="题目大意:"></a>题目大意:</h3><p>给定一个01序列,有两种操作<br>1.对于一个区间01翻转<br>2.查询区间内不同的序列个数  </p>
+<h3 id="题解-1"><a href="#题解-1" class="headerlink" title="题解:"></a>题解:</h3><p>线段树维护DP转移<br>$x[i]==0$<br>$dp[i][0]=dp[i-1][0]+dp[i-1][1]+1$<br>$dp[i][1]=dp[i-1][1]$<br>$x[i]==1$<br>$dp[i][0]=dp[i-1][0]$<br>$dp[i][1]=dp[i-1][0]+dp[i-1][1]+1$<br>这个dp转移是线性的,用线段树维护矩阵转移<br>每次翻转有一个变换方式(待填坑)  </p>
+<h3 id="CODE-1"><a href="#CODE-1" class="headerlink" title="CODE"></a><a href="http://acm.hdu.edu.cn/viewcode.php?rid=21825575" target="_blank" rel="external">CODE</a></h3>
       
     </div>
     
@@ -512,7 +486,7 @@ $dp[i][1]=dp[i-1][0]+dp[i-1][1]+1$<br>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">HDU6133</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">题解:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.3.</span> <span class="nav-text">CODE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">HDU6155</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.2.</span> <span class="nav-text">题解:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.3.</span> <span class="nav-text">CODE</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HDU6133"><span class="nav-number">1.</span> <span class="nav-text">HDU6133</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意"><span class="nav-number">1.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解"><span class="nav-number">1.2.</span> <span class="nav-text">题解:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CODE"><span class="nav-number">1.3.</span> <span class="nav-text">CODE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HDU6155"><span class="nav-number">2.</span> <span class="nav-text">HDU6155</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意-1"><span class="nav-number">2.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-1"><span class="nav-number">2.2.</span> <span class="nav-text">题解:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CODE-1"><span class="nav-number">2.3.</span> <span class="nav-text">CODE</span></a></li></ol></li></ol></div>
             
 
           </div>

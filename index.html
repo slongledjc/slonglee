@@ -330,35 +330,14 @@
 
       
         
-          
-            <p>微积分笔记</p>
-<p>&lt;!--more--&gt;</p>
-<p>数列极限定义:对于数列${x_n},\forall\varepsilon\gt0,\exists N,n\gt N$使得$|x_n-A|\gt \varepsilon,$那么称${x_n}$极限为$A,$或收敛于$A$<br>
-使用定义证明:<br>
-$\lim\limits_{n\to \infty}\frac{1}{n}=0$<br>
-$\lim\limits_{n\to \infty}\sqrt[n]{a}=1(a&gt;1)$<br>
-$\lim\limits_{n\to \infty}\sqrt[n]{n}=1$<br>
-数列极限的性质:<br>
-1.唯一性<br>
-2.有界性<br>
-3.保序性<br>
-求极限:<br>
-$\lim\limits_{x\to\infty}\frac{a(q-1)(p^n-1)+b(p-1)(q^n-1)}{a(q-1)(p^{n-1}-1)+b(p-1)(q^{n-1}-1)}$<br>
-$\lim\limits_{x\to\infty}\frac{(2^3-1)(3^3-1)\dots(n^3-1)}{(2^3+1)(3^3+1)\dots(n^3+1)}$<br>
-$\lim\limits_{x\to\infty}\sin^2{\pi\sqrt{n^2+n}}$<br>
-定理1:<br>
-$\lim\limits_{n\to\infty}x_n=A\iff{x_n}$的任意子列的极限为$A\iff\lim\limits_{n\to\infty}x_{2n}=\lim\limits_{n\to\infty}x_{2n+1}=A$<br>
-证明$\lim\limits_{n\to\infty}(-1)^n$不存在<br>
-$\lim\limits_{n\to\infty}(-1)^{2n}=1\neq\lim\limits_{n\to\infty}(-1)^{2n+1}=-1,$所以不存在<br>
-柯西收敛定理:<br>
-$\forall\varepsilon&gt;0,\exists N,$对$\forall n,m&gt;N,s.t.|x_m-x_n|&lt;\varepsilon$<br>
-不需要$A$,只需数列本身即可证明数列极限的存在<br>
-数列不存在极限:<br>
-$\exists\varepsilon&gt;0,\forall N,\exists n&gt;N,s.t. |x_n-A|\ge\varepsilon$<br>
-$\exists\varepsilon&gt;0,\forall N,\exists n,m&gt;N,s.t. |x_m-x_n|\ge\varepsilon$<br>
-$\exists\varepsilon&gt;0,\forall N,\exists k,n&gt;N,s.t. |x_n+k-x_n|\ge\varepsilon$</p>
-
-          
+          <p>微积分笔记</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/11/Calculus/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -475,40 +454,14 @@ $\exists\varepsilon&gt;0,\forall N,\exists k,n&gt;N,s.t. |x_n+k-x_n|\ge\varepsil
 
       
         
-          
-            <p>八月,一些有趣的题目
-&lt;!--more--&gt;</p>
-<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6133" target="_blank" rel="external">HDU6133</a></h2>
-<h3>题目大意:</h3>
-<p>给定一棵树,每个点都有一个权值且儿子数不超过$2$<br>
-对于每个点,他子树中所有的权值升序形成一个序列$A$,那么他的答案是$\sum_{i=1}^{size} A[i]* (size-i+1)$<br>
-输出每个点的答案</p>
-<h3>题解:</h3>
-<p>比赛时写了一个每个点的归并排序,但是会被一条链卡成$O(N^2)$<br>
-问了一圈都是线段树合并,但是官方题解没有到啊,然后找到出题人才明白怎么做<br>
-对于一个序列$A$,我们现在想插入一个值$val$,我们要将小于$val$的所有值出现次数$+1$,也就是询问一个前缀和,然后$val$的出现次数是$sum-sum_{pre}$,还是询问前缀和,删除同理<br>
-所以这个过程我们离散化一下,插入进树状数组即可<br>
-我们dfs时先进左子树,出来之后清空,再做右子树,右子树出来后,再把左子树插入进去<br>
-但是为了减少插入删除次数,我们把字数个数多的节点当做右子树,这样每个点被访问次数为$logN$次</p>
-<h3><a href="http://acm.hdu.edu.cn/viewcode.php?rid=21788044" target="_blank" rel="external">CODE</a></h3>
-<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6155" target="_blank" rel="external">HDU6155</a></h2>
-<h3>题目大意:</h3>
-<p>给定一个01序列,有两种操作<br>
-1.对于一个区间01翻转<br>
-2.查询区间内不同的序列个数</p>
-<h3>题解:</h3>
-<p>线段树维护DP转移<br>
-$x[i]==0$<br>
-$dp[i][0]=dp[i-1][0]+dp[i-1][1]+1$<br>
-$dp[i][1]=dp[i-1][1]$
-$x[i]==1$<br>
-$dp[i][0]=dp[i-1][0]$<br>
-$dp[i][1]=dp[i-1][0]+dp[i-1][1]+1$<br>
-这个dp转移是线性的,用线段树维护矩阵转移<br>
-每次翻转有一个变换方式(待填坑)</p>
-<h3><a href="http://acm.hdu.edu.cn/viewcode.php?rid=21825575" target="_blank" rel="external">CODE</a></h3>
-
-          
+          <p>八月,一些有趣的题目<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/19/八月趣题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -625,44 +578,14 @@ $dp[i][1]=dp[i-1][0]+dp[i-1][1]+1$<br>
 
       
         
-          
-            <p>(0/17)努力提升姿势水平
-&lt;!--more--&gt;</p>
-<p><a href="http://community.topcoder.com/stat?c=problem_statement&amp;pm=13797" target="_blank" rel="external">PublicTransitHard</a></p>
-<p><a href="http://community.topcoder.com/stat?c=problem_statement&amp;pm=12868" target="_blank" rel="external">SimilarNames</a></p>
-<p>$n$个字符串$s_1, s_2, …, s_n，m$个条件$(a_i,b_i)$，统计满足$s_{p(a_i)}$是$s_{p(b_i)}$前缀的排列$p_1, p_2, …, p_n$数量</p>
-<p>$n &lt;= 50, |s_i| &lt;= 50, m &lt;= 8 $</p>
-<p><a href="http://community.topcoder.com/stat?c=problem_statement&amp;pm=13711" target="_blank" rel="external">BichromeSky</a>
-$n个红点，m个蓝点，没有三点共线，第i个红点以p_i的概率出现，求红点的凸包包含所有蓝点的概率$
-$n, m &lt;= 100 $</p>
-<p><a href="http://community.topcoder.com/stat?c=problem_statement&amp;pm=13235" target="_blank" rel="external">InverseRMQ</a></p>
-<p><a href="http://community.topcoder.com/stat?c=problem_statement&amp;pm=13369" target="_blank" rel="external">TreeDistance</a></p>
-<p><a href="http://community.topcoder.com/stat?c=problem_statement&amp;pm=13185" target="_blank" rel="external">TreePuzzle</a></p>
-<p><a href="http://community.topcoder.com/stat?c=problem_statement&amp;pm=13117" target="_blank" rel="external">EagleInZoo</a></p>
-<p><a href="http://community.topcoder.com/stat?c=problem_statement&amp;pm=11906" target="_blank" rel="external">EllysLamps</a></p>
-<p><a href="http://community.topcoder.com/stat?c=problem_statement&amp;pm=12742" target="_blank" rel="external">SimilarSequencesAnother</a>
-$(A, B) 是相似的，当且仅当A, B各删不超过2个字符后相等。给定长度n和字符集m，问相似(A, B)数量$
-$n &lt;= 100 $</p>
-<p><a href="http://community.topcoder.com/stat?c=problem_statement&amp;pm=12996" target="_blank" rel="external">TaroCheckers</a>
-$n * m的棋盘，第i行前l[i]个格子有一个棋子，后r[i]个格子有一个棋子，每列最多有一个棋子，问方案数$
-$n &lt;= 50, m &lt;= 200 $</p>
-<p><a href="http://community.topcoder.com/stat?c=problem_statement&amp;pm=12999" target="_blank" rel="external">OneDimensionalRobot</a></p>
-<p><a href="http://community.topcoder.com/stat?c=problem_statement&amp;pm=13145" target="_blank" rel="external">PerfectSquare</a></p>
-<p><a href="http://community.topcoder.com/stat?c=problem_statement&amp;pm=12949" target="_blank" rel="external">AlienAndPermutation</a></p>
-<p><a href="http://www.spoj.com/problems/MATCH/" target="_blank" rel="external">Perfect Matching</a>
-$n个点的二分图，假设完备匹配的数量是x，判断x = 0 (mod 2) $
-$n &lt;= 300 $</p>
-<p><a href="https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=360&amp;page=show_problem&amp;problem=2625" target="_blank" rel="external">(False)Face</a>
-$n个点的二分图，假设完备匹配的数量是x，判断x = 0 (mod 4) $
-$n &lt;= 300 $</p>
-<p><a href="http://codeforces.com/contest/258/problem/D" target="_blank" rel="external">Little Elephant and Broken Sorting</a>
-$长度为n的排列，m次交换a_i, b_i，每个交换a_i, b_i有50%的概率不发生，问逆序数的期望 $
-$n, m &lt;= 1000 $</p>
-<p><a href="http://codeforces.com/problemset/problem/513/G3" target="_blank" rel="external">Inversions problem</a>
-$长度为n的排列，每次随机一个子段翻转，问m轮后逆序数的期望$
-$n &lt;= 300, m &lt;= 10^9 $</p>
-
-          
+          <p>(0/17)努力提升姿势水平<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/18/乱做1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -779,14 +702,14 @@ $n &lt;= 300, m &lt;= 10^9 $</p>
 
       
         
-          
-            <p>网络流<br>
-&lt;!--more--&gt;
-模板<br>
-最大流:<a href="https://loj.ac/submission/24640" target="_blank" rel="external">CODE</a><br>
-费用流:<a href="https://loj.ac/submission/24656" target="_blank" rel="external">CODE</a></p>
-
-          
+          <p>网络流<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/16/HIT2017-Day16/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -903,30 +826,14 @@ $n &lt;= 300, m &lt;= 10^9 $</p>
 
       
         
-          
-            <p>二分图匹配,崩盘<br>
-&lt;!--more--&gt;
-两道模板题<br>
-二分图最大匹配<br>
-<a href="http://acm.hdu.edu.cn/showproblem.php?pid=2063" target="_blank" rel="external">HDU2063</a><br>
-<a href="http://acm.hdu.edu.cn/viewcode.php?rid=21723922" target="_blank" rel="external">CODE</a><br>
-二分图最大权匹配<br>
-<a href="http://acm.hdu.edu.cn/showproblem.php?pid=2255" target="_blank" rel="external">HDU2255</a><br>
-<a href="http://acm.hdu.edu.cn/viewcode.php?rid=21726837" target="_blank" rel="external">CODE</a></p>
-<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=2819" target="_blank" rel="external">HDU2819</a></h2>
-<h3>题目大意:</h3>
-<p>给定一个$n*n$的$01$矩阵,询问是否能通过交换行或列,使得对角线都为1,能的话输出一组方案</p>
-<h3>题解:</h3>
-<p>交换的话每行/列元素间的位置关系不变,问题转化为是否存在每行选出一个$1$所属的行不同<br>
-按行和列做二分图貌似是常用模型</p>
-<h3><a href="http://acm.hdu.edu.cn/viewcode.php?rid=21727122" target="_blank" rel="external">CODE</a></h3>
-<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5093" target="_blank" rel="external">HDU5093</a></h2>
-<h3>题目大意:</h3>
-<p>给定一张$n*m$的图,每个点有三种可能</p>
-<h3>题解:</h3>
-<h3><a href="">CODE</a></h3>
-
-          
+          <p>二分图匹配,崩盘<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/14/HIT2017-Day15/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1162,59 +1069,14 @@ $n &lt;= 300, m &lt;= 10^9 $</p>
 
       
         
-          
-            <p>考试日*2
-&lt;!--more--&gt;</p>
-<h2><a href="http://acm.hdu.edu.cn/showproblem.php?pid=5723" target="_blank" rel="external">HDU5723</a></h2>
-<h3>题目大意:</h3>
-<p>给定一张无向图,求连接任意两点需要的最短路径,以及任意两点距离的期望</p>
-<h3>题解:</h3>
-<p>第一问是求最小生成树
-第二问我们枚举最小生成树上的每条边,这条边被走过的概率是:这条边被经过的次数$<em>\frac{2}{n</em>(n-1)}$,也就是断开这条边,左右两个块点个数乘起来的值
-边表每次要初始化啊！！！</p>
-<h3><a href="http://acm.hdu.edu.cn/viewcode.php?rid=21699136" target="_blank" rel="external">CODE</a></h3>
-<h2><a href="http://codeforces.com/problemset/problem/567/E" target="_blank" rel="external">CF567E</a></h2>
-<h3>题目大意:</h3>
-<p>给定一张有向图,起点和终点,询问每条边是:<br>
-一定在最短路上(<code>YES</code>)<br>
-最少减去多少长度(减少后的长度为正数)能使这条边一定在最短路上(<code>CAN len</code>)<br>
-还是根本无法在最短路上(<code>NO</code>)</p>
-<h3>题解:</h3>
-<p>先正着跑一边最短路,然后反着再跑一边,把所有可以为最短路边的边加入一张新图,跑Tarjan找到桥输出<code>YES</code>
-枚举剩下的边(u,v),<code>dis[1][u]+len[u][v]+dis[2][v]-det=最短路-1</code>
-如果<code>len[u][v]-det</code>大于1就输出<code>CAN len[u][v]</code>
-否则输出<code>NO</code><br>
-解成就！<code>&lt;SPFA被卡&gt;</code></p>
-<h3><a href="http://codeforces.com/contest/567/submission/29445422" target="_blank" rel="external">CODE</a></h3>
-<h2><a href="http://codeforces.com/problemset/problem/383/C" target="_blank" rel="external">CF383C</a></h2>
-<h3>题目大意:</h3>
-<p>给定一棵树,有两个操作
-1.对一个节点的权值添加<code>val</code>，则它的孩子节点的权值要添加<code>-b</code>,再下层以此类推<br>
-2.单点查询</p>
-<h3>题解:</h3>
-<p>DFS序,考场上写了一个线段树,标记下传时按深度正负翻转<br>
-但是有另一种更好写的方法<br>
-我们按深度奇偶维护两棵树状数组,修改时对两棵树状数组的子树区间,奇数的<code>+val</code>,偶数的<code>-val</code>,查询时判断在那棵树查询就行了</p>
-<h3><a href="http://codeforces.com/contest/383/submission/29429564" target="_blank" rel="external">CODE1</a> <a href="">CODE2</a></h3>
-<h2><a href="http://codeforces.com/problemset/problem/582/A" target="_blank" rel="external">CF582A</a></h2>
-<h3>题目大意:</h3>
-<p>有一个数组$A$,两两做gcd等到$n^2$个数,现在打乱顺序给你这$n^2$个数,询问数组$A$</p>
-<h3>题解:</h3>
-<p>一定存在一种方案使得$A$的元素都在$n^2$个数中<br>
-考虑,两个数gcd得到的最大值就是两个数中较小的那个,所以当前最大的数一定是$A$中元素,然后把它和原来已经定了的元素做gcd在那$n^2$个数中删去两次(两个数gcd可以交换顺序)</p>
-<h3><a href="http://codeforces.com/contest/582/submission/29429541" target="_blank" rel="external">CODE</a></h3>
-<h2><a href="http://codeforces.com/contest/141/problem/C" target="_blank" rel="external">CF141C</a></h2>
-<h3>题目大意:</h3>
-<p>给定一个序列每个数前面比他大的数个数,询问原数列(元素可重复)</p>
-<h3>题解:</h3>
-<p>构造题啊,构造了1h都没构出来啊<br>
-前面的肯定要大,对那个限制从小到大排序后,从前往后扫<br>
-如果当前的限制大于前面已经确定大小的数的个数,就说明不合法<br>
-否则,就将这个数插在第$lim+1$的位置上,这样既不破坏原来的条件也满足了现在的要求<br>
-原来<code>vector</code>还有<code>insert</code>这种骚操作</p>
-<h3><a href="http://codeforces.com/contest/141/submission/29378753" target="_blank" rel="external">CODE</a></h3>
-
-          
+          <p>考试日*2<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/12/HIT2017-Day13/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1450,66 +1312,14 @@ $n &lt;= 300, m &lt;= 10^9 $</p>
 
       
         
-          
-            <p>Splay专场,码不出裸题的我无可奈何去颓废
-&lt;!--more--&gt;</p>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3223" target="_blank" rel="external">BZOJ3223文艺平衡树</a></h2>
-<h3>题目大意:</h3>
-<p>支持区间翻转操作</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3224" target="_blank" rel="external">BZOJ3224普通平衡树</a></h2>
-<h3>题目大意:</h3>
-<p>支持:
-1.插入x数
-2.删除x数(若有多个相同的数，因只删除一个)
-3.查询x数的排名(若有多个相同的数，因输出最小的排名)
-4.查询排名为x的数
-5.求x的前驱(前驱定义为小于x，且最大的数)
-6.求x的后继(后继定义为大于x，且最小的数)</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=4864" target="_blank" rel="external">BZOJ4864神秘物质</a></h2>
-<h3>题目大意:</h3>
-<p>对于一个序列支持:
-插入,删除
-询问一个区间内所有长度大于$1$的区间的最大,最小极差</p>
-<h3>题解:</h3>
-<p>最大极差维护区间最大值最小值即可
-一个性质:最小极差一定为相邻两个数差的绝对值
-证明:如果左右扩展出更大或更小不会更优,如果不大也不小会更新但也是相邻两个</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1500" target="_blank" rel="external">BZOJ1500维修数列</a></h2>
-<h3>题目大意:</h3>
-<p>要求支持插入,删除,翻转,区间整体赋值,求一段的和,求区间最最大子段和</p>
-<h3>题解:</h3>
-<p>经典题,维护子树的和,子树最大字段和,左端点开始最大子段和,右端点结尾最大子段和,翻转标记,区间整体赋值标记</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=2809" target="_blank" rel="external">BZOJ2809</a></h2>
-<h3>题目大意:</h3>
-<p>给定一个树结构,每个点有两个值$a_i,b_i$,要找到一个节点$pos$作为父节点,在他及其子树中找到尽可能多的节点$(cnt$个点$)$,但 $\sum{b_i}&lt;m$ ,询问 $max(a_{pos}*cnt)$</p>
-<h3>题解:</h3>
-<p>子树尽可能选多每次尽可能取小的即可
-这样我们枚举父节点,用可并堆处理即可
-左偏树内部儿子指针指来指去,外部用一个指针指到根顶</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3196" target="_blank" rel="external">BZOJ3196二逼平衡树</a></h2>
-<h3>题目大意:</h3>
-<p>1.查询k在区间内的排名
-2.查询区间内排名为k的值
-3.修改某一位值上的数值
-4.查询k在区间内的前驱(前驱定义为小于x，且最大的数)
-5.查询k在区间内的后继(后继定义为大于x，且最小的数)</p>
-<h3>题解:</h3>
-<p>分块大法好
-不涉及插入,分块大法好
-3.修改只要每次<code>rebuild</code>即可
-1.查询区间内比k小的数
-2.二分答案,查询排名判断
-4.查询区间内比x小最大的数
-5.查询区间内比x大最小的数
-$O(mlogX_i\sqrt{n}log{n})$</p>
-<h3><a href="">CODE</a></h3>
-
-          
+          <p>Splay专场,码不出裸题的我无可奈何去颓废<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day11/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1626,12 +1436,14 @@ $O(mlogX_i\sqrt{n}log{n})$</p>
 
       
         
-          
-            <p>今天是线段树+树状数组(强烈差评)
-&lt;!--more--&gt;</p>
-<h2></h2>
-
-          
+          <p>今天是线段树+树状数组(强烈差评)<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/10/HIT2017-Day10/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

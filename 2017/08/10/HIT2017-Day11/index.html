@@ -94,17 +94,17 @@
 
 
 
-<meta name="description" content="Splay专场,码不出裸题的我无可奈何去颓废 &amp;lt;!--more--&amp;gt; BZOJ3223文艺平衡树 题目大意: 支持区间翻转操作 CODE BZOJ3224普通平衡树 题目大意: 支持: 1.插入x数 2.删除x数(若有多个相同的数，因只删除一个) 3.查询x数的排名(若有多个相同的数，因输出最小的排名) 4.查询排名为x的数 5.求x的前驱(前驱定义为小于x，且最大的数) 6.求x的后">
+<meta name="description" content="Splay专场,码不出裸题的我无可奈何去颓废">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HIT2017 Day11">
 <meta property="og:url" content="http://yoursite.com/2017/08/10/HIT2017-Day11/index.html">
 <meta property="og:site_name" content="slongle">
-<meta property="og:description" content="Splay专场,码不出裸题的我无可奈何去颓废 &amp;lt;!--more--&amp;gt; BZOJ3223文艺平衡树 题目大意: 支持区间翻转操作 CODE BZOJ3224普通平衡树 题目大意: 支持: 1.插入x数 2.删除x数(若有多个相同的数，因只删除一个) 3.查询x数的排名(若有多个相同的数，因输出最小的排名) 4.查询排名为x的数 5.求x的前驱(前驱定义为小于x，且最大的数) 6.求x的后">
+<meta property="og:description" content="Splay专场,码不出裸题的我无可奈何去颓废">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2017-08-11T02:02:10.563Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HIT2017 Day11">
-<meta name="twitter:description" content="Splay专场,码不出裸题的我无可奈何去颓废 &amp;lt;!--more--&amp;gt; BZOJ3223文艺平衡树 题目大意: 支持区间翻转操作 CODE BZOJ3224普通平衡树 题目大意: 支持: 1.插入x数 2.删除x数(若有多个相同的数，因只删除一个) 3.查询x数的排名(若有多个相同的数，因输出最小的排名) 4.查询排名为x的数 5.求x的前驱(前驱定义为小于x，且最大的数) 6.求x的后">
+<meta name="twitter:description" content="Splay专场,码不出裸题的我无可奈何去颓废">
 
 
 
@@ -329,64 +329,18 @@
       
 
       
-        <p>Splay专场,码不出裸题的我无可奈何去颓废
-&lt;!--more--&gt;</p>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3223" target="_blank" rel="external">BZOJ3223文艺平衡树</a></h2>
-<h3>题目大意:</h3>
-<p>支持区间翻转操作</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3224" target="_blank" rel="external">BZOJ3224普通平衡树</a></h2>
-<h3>题目大意:</h3>
-<p>支持:
-1.插入x数
-2.删除x数(若有多个相同的数，因只删除一个)
-3.查询x数的排名(若有多个相同的数，因输出最小的排名)
-4.查询排名为x的数
-5.求x的前驱(前驱定义为小于x，且最大的数)
-6.求x的后继(后继定义为大于x，且最小的数)</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=4864" target="_blank" rel="external">BZOJ4864神秘物质</a></h2>
-<h3>题目大意:</h3>
-<p>对于一个序列支持:
-插入,删除
-询问一个区间内所有长度大于$1$的区间的最大,最小极差</p>
-<h3>题解:</h3>
-<p>最大极差维护区间最大值最小值即可
-一个性质:最小极差一定为相邻两个数差的绝对值
-证明:如果左右扩展出更大或更小不会更优,如果不大也不小会更新但也是相邻两个</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1500" target="_blank" rel="external">BZOJ1500维修数列</a></h2>
-<h3>题目大意:</h3>
-<p>要求支持插入,删除,翻转,区间整体赋值,求一段的和,求区间最最大子段和</p>
-<h3>题解:</h3>
-<p>经典题,维护子树的和,子树最大字段和,左端点开始最大子段和,右端点结尾最大子段和,翻转标记,区间整体赋值标记</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=2809" target="_blank" rel="external">BZOJ2809</a></h2>
-<h3>题目大意:</h3>
-<p>给定一个树结构,每个点有两个值$a_i,b_i$,要找到一个节点$pos$作为父节点,在他及其子树中找到尽可能多的节点$(cnt$个点$)$,但 $\sum{b_i}&lt;m$ ,询问 $max(a_{pos}*cnt)$</p>
-<h3>题解:</h3>
-<p>子树尽可能选多每次尽可能取小的即可
-这样我们枚举父节点,用可并堆处理即可
-左偏树内部儿子指针指来指去,外部用一个指针指到根顶</p>
-<h3><a href="">CODE</a></h3>
-<h2><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3196" target="_blank" rel="external">BZOJ3196二逼平衡树</a></h2>
-<h3>题目大意:</h3>
-<p>1.查询k在区间内的排名
-2.查询区间内排名为k的值
-3.修改某一位值上的数值
-4.查询k在区间内的前驱(前驱定义为小于x，且最大的数)
-5.查询k在区间内的后继(后继定义为大于x，且最小的数)</p>
-<h3>题解:</h3>
-<p>分块大法好
-不涉及插入,分块大法好
-3.修改只要每次<code>rebuild</code>即可
-1.查询区间内比k小的数
-2.二分答案,查询排名判断
-4.查询区间内比x小最大的数
-5.查询区间内比x大最小的数
-$O(mlogX_i\sqrt{n}log{n})$</p>
-<h3><a href="">CODE</a></h3>
-
+        <p>Splay专场,码不出裸题的我无可奈何去颓废<br><a id="more"></a></p>
+<h2 id="BZOJ3223文艺平衡树"><a href="#BZOJ3223文艺平衡树" class="headerlink" title="BZOJ3223文艺平衡树"></a><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3223" target="_blank" rel="external">BZOJ3223文艺平衡树</a></h2><h3 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意:"></a>题目大意:</h3><p>支持区间翻转操作</p>
+<h3 id="CODE"><a href="#CODE" class="headerlink" title="CODE"></a><a href="">CODE</a></h3><h2 id="BZOJ3224普通平衡树"><a href="#BZOJ3224普通平衡树" class="headerlink" title="BZOJ3224普通平衡树"></a><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3224" target="_blank" rel="external">BZOJ3224普通平衡树</a></h2><h3 id="题目大意-1"><a href="#题目大意-1" class="headerlink" title="题目大意:"></a>题目大意:</h3><p>支持:<br>1.插入x数<br>2.删除x数(若有多个相同的数，因只删除一个)<br>3.查询x数的排名(若有多个相同的数，因输出最小的排名)<br>4.查询排名为x的数<br>5.求x的前驱(前驱定义为小于x，且最大的数)<br>6.求x的后继(后继定义为大于x，且最小的数)</p>
+<h3 id="CODE-1"><a href="#CODE-1" class="headerlink" title="CODE"></a><a href="">CODE</a></h3><h2 id="BZOJ4864神秘物质"><a href="#BZOJ4864神秘物质" class="headerlink" title="BZOJ4864神秘物质"></a><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=4864" target="_blank" rel="external">BZOJ4864神秘物质</a></h2><h3 id="题目大意-2"><a href="#题目大意-2" class="headerlink" title="题目大意:"></a>题目大意:</h3><p>对于一个序列支持:<br>插入,删除<br>询问一个区间内所有长度大于$1$的区间的最大,最小极差</p>
+<h3 id="题解"><a href="#题解" class="headerlink" title="题解:"></a>题解:</h3><p>最大极差维护区间最大值最小值即可<br>一个性质:最小极差一定为相邻两个数差的绝对值<br>证明:如果左右扩展出更大或更小不会更优,如果不大也不小会更新但也是相邻两个</p>
+<h3 id="CODE-2"><a href="#CODE-2" class="headerlink" title="CODE"></a><a href="">CODE</a></h3><h2 id="BZOJ1500维修数列"><a href="#BZOJ1500维修数列" class="headerlink" title="BZOJ1500维修数列"></a><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=1500" target="_blank" rel="external">BZOJ1500维修数列</a></h2><h3 id="题目大意-3"><a href="#题目大意-3" class="headerlink" title="题目大意:"></a>题目大意:</h3><p>要求支持插入,删除,翻转,区间整体赋值,求一段的和,求区间最最大子段和</p>
+<h3 id="题解-1"><a href="#题解-1" class="headerlink" title="题解:"></a>题解:</h3><p>经典题,维护子树的和,子树最大字段和,左端点开始最大子段和,右端点结尾最大子段和,翻转标记,区间整体赋值标记</p>
+<h3 id="CODE-3"><a href="#CODE-3" class="headerlink" title="CODE"></a><a href="">CODE</a></h3><h2 id="BZOJ2809"><a href="#BZOJ2809" class="headerlink" title="BZOJ2809"></a><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=2809" target="_blank" rel="external">BZOJ2809</a></h2><h3 id="题目大意-4"><a href="#题目大意-4" class="headerlink" title="题目大意:"></a>题目大意:</h3><p>给定一个树结构,每个点有两个值$a_i,b_i$,要找到一个节点$pos$作为父节点,在他及其子树中找到尽可能多的节点$(cnt$个点$)$,但 $\sum{b_i}&lt;m$ ,询问 $max(a_{pos}*cnt)$ </p>
+<h3 id="题解-2"><a href="#题解-2" class="headerlink" title="题解:"></a>题解:</h3><p>子树尽可能选多每次尽可能取小的即可<br>这样我们枚举父节点,用可并堆处理即可<br>左偏树内部儿子指针指来指去,外部用一个指针指到根顶</p>
+<h3 id="CODE-4"><a href="#CODE-4" class="headerlink" title="CODE"></a><a href="">CODE</a></h3><h2 id="BZOJ3196二逼平衡树"><a href="#BZOJ3196二逼平衡树" class="headerlink" title="BZOJ3196二逼平衡树"></a><a href="http://www.lydsy.com/JudgeOnline/problem.php?id=3196" target="_blank" rel="external">BZOJ3196二逼平衡树</a></h2><h3 id="题目大意-5"><a href="#题目大意-5" class="headerlink" title="题目大意:"></a>题目大意:</h3><p>1.查询k在区间内的排名<br>2.查询区间内排名为k的值<br>3.修改某一位值上的数值<br>4.查询k在区间内的前驱(前驱定义为小于x，且最大的数)<br>5.查询k在区间内的后继(后继定义为大于x，且最小的数)</p>
+<h3 id="题解-3"><a href="#题解-3" class="headerlink" title="题解:"></a>题解:</h3><p>分块大法好<br>不涉及插入,分块大法好<br>3.修改只要每次<code>rebuild</code>即可<br>1.查询区间内比k小的数<br>2.二分答案,查询排名判断<br>4.查询区间内比x小最大的数<br>5.查询区间内比x大最小的数<br>$O(mlogX_i\sqrt{n}log{n})$</p>
+<h3 id="CODE-5"><a href="#CODE-5" class="headerlink" title="CODE"></a><a href="">CODE</a></h3>
       
     </div>
     
@@ -538,7 +492,7 @@ $O(mlogX_i\sqrt{n}log{n})$</p>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">BZOJ3223文艺平衡树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">1.2.</span> <span class="nav-text">CODE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">BZOJ3224普通平衡树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">2.2.</span> <span class="nav-text">CODE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">BZOJ4864神秘物质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.2.</span> <span class="nav-text">题解:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">3.3.</span> <span class="nav-text">CODE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">BZOJ1500维修数列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.2.</span> <span class="nav-text">题解:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">4.3.</span> <span class="nav-text">CODE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">BZOJ2809</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.2.</span> <span class="nav-text">题解:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">5.3.</span> <span class="nav-text">CODE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">BZOJ3196二逼平衡树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">6.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">6.2.</span> <span class="nav-text">题解:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undefined"><span class="nav-number">6.3.</span> <span class="nav-text">CODE</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#BZOJ3223文艺平衡树"><span class="nav-number">1.</span> <span class="nav-text">BZOJ3223文艺平衡树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意"><span class="nav-number">1.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CODE"><span class="nav-number">1.2.</span> <span class="nav-text">CODE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BZOJ3224普通平衡树"><span class="nav-number">2.</span> <span class="nav-text">BZOJ3224普通平衡树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意-1"><span class="nav-number">2.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CODE-1"><span class="nav-number">2.2.</span> <span class="nav-text">CODE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BZOJ4864神秘物质"><span class="nav-number">3.</span> <span class="nav-text">BZOJ4864神秘物质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意-2"><span class="nav-number">3.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解"><span class="nav-number">3.2.</span> <span class="nav-text">题解:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CODE-2"><span class="nav-number">3.3.</span> <span class="nav-text">CODE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BZOJ1500维修数列"><span class="nav-number">4.</span> <span class="nav-text">BZOJ1500维修数列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意-3"><span class="nav-number">4.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-1"><span class="nav-number">4.2.</span> <span class="nav-text">题解:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CODE-3"><span class="nav-number">4.3.</span> <span class="nav-text">CODE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BZOJ2809"><span class="nav-number">5.</span> <span class="nav-text">BZOJ2809</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意-4"><span class="nav-number">5.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-2"><span class="nav-number">5.2.</span> <span class="nav-text">题解:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CODE-4"><span class="nav-number">5.3.</span> <span class="nav-text">CODE</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BZOJ3196二逼平衡树"><span class="nav-number">6.</span> <span class="nav-text">BZOJ3196二逼平衡树</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#题目大意-5"><span class="nav-number">6.1.</span> <span class="nav-text">题目大意:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解-3"><span class="nav-number">6.2.</span> <span class="nav-text">题解:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CODE-5"><span class="nav-number">6.3.</span> <span class="nav-text">CODE</span></a></li></ol></li></ol></div>
             
 
           </div>
